@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Questionare (Zhihan Zhang)</title>
+        <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <form action="/cgi-bin/hw3/collect_data.pl" method="post">
+        <h2> Welcome to Zhihan's Questionare </h2>
+        <p/>
+        
+        <h4> Your Name: </h4>
+        <p>
+            <input type="text" name="name"/>
+        </p>
+        <h4> Your Age: </h4>
+        <p>
+            <input type="text" name="age"/>
+        </p>
+        <h4> Your Gender: </h4>
+        <p>
+            <input type="radio" name="gender" value="female"/> Female <br/>
+            <input type="radio" name="gender" value="male"/> Male <br/>
+        </p>
+        <h4> Your Email Address: </h4>
+        <p>
+            <input type="text" name="email"/>
+        </p>
+        <p>
+            <input type="submit" value="Submit"/>
+            <input type="reset" value="Clear"/>
+        </p>
+        </form>
+        
+        <hr/>
+        <p>
+            To see the results of the questionare so far, click <a href="/cgi-bin/hw3/list_results.pl">here</a>.
+        </p>
+        <p>
+            Return to previous page, click <a href="/hw3/hw3.html">here</a>.
+        </p>
+        </body>
+    </html>
+      

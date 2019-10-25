@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Homework 1 (Zhihan Zhang)</title>
+        <link href="/css/style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div class="header">
+            <a href='/index.html'>
+                <img src="/xiaosong'e.jpg" width=100 height=100 alt="My portrait">
+            </a>
+            <span style="display: inline"><b class="web_title">Homework 1</b></span>
+            <hr>
+        </div> 
+        <p>
+            <b>Q1</b>: Register to the class forum.
+        </p>
+        <p>
+            <b>A1</b>: Finished.
+        </p>
+        <p>
+            <b>Q2</b>: Find out which category so-called "Chrome plug-in" technology belongs to.
+        <p>
+            <b>A2</b>: Distributed Object Technology.<br>
+            Distributed Object Technology is the technique to allow objects distributed across difference spaces, 
+            or different platforms, but they can work together by sharing data and invoking methods. Therefore, 
+            you do not need to place the object on both the client and the server.<br>
+            I consider Chrome plug-ins as a technique belonging to DOT because they are packed programs placed on 
+            the client side. While the server may not be aware of what plug-in program the client insert into the 
+            browser, the server can invoke it whenever the client needs.
+        </p>
+        <p>
+            <b>Q3</b>: What are the advantages and disadvantages of the stateless character? Can the server know 
+            how many browsers are reading its documents?
+        </p>
+        <p>
+            <b>A3</b>:<br>
+            <b>Advantage</b>: (1) Simple. The server does not need to store each user's information in order to 
+            communicate with them.<br>
+            (2) Fault tolerance. User's request can be responsed by any available server, so even one server 
+            stops the connection, there are still other servers that can response to the user without the 
+            transmission of user information.<br>
+            (3) HTTP is a stateless protocol itself. Developers don't need to simulate status for the connection 
+            if they adopt the stateless mode.<br>
+            <b>Disadvantage</b>: The user should send its information (cookies, for example) in each request. This 
+            occupies the bandwidth of the connection.
+        </p>
+        <p>
+            The server cannot know how many browsers are accessing its document, because the stateless character
+            means that other clients are able to imitate the current client's request, and since there is
+            no client information and status on the server, the server cannot distinguish the "real" requests and 
+            "fake" requests.
+        </p>
+        <p>
+            <b>Q4</b>: Why Java Applet is getting dead and Javascript succeeds?
+        </p>
+        <p>
+            <b>A4</b>: Java Applet is Java programs which are embedding into the webpage. It requires JVM and Java
+            interpreters on the server to compile and execute those programs before rendering the webpage, which is
+            not in line with the REST style.
+            In contrast, Javascript is an interpreted language which can be inserted directly into HTML scripts.
+            This means that Javascript scipts can directly interact with HTML. 
+        </p>
+    </body>
+</html>

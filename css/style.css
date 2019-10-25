@@ -1,0 +1,25 @@
+.header {
+    text-align: center;
+}
+body {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.web_title {
+    font-size: 32px;
+}
+
+a:link {
+    color:blue;
+    text-decoration: none;
+}
+a:visited {
+    color: blue;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
