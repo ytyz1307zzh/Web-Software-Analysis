@@ -1,4 +1,4 @@
-# web-software-analysis
+# Web-Software-Analysis
 Webpages and scripts for the course Web Software Technology.
 
 A apache server is needed.
