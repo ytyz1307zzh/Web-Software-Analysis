@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <script language="javascript">
+   // Objects
+   
+   var tourOperator = "Ten Bellies Tours"; // a global variable
+   var holList = [];
+   
+   // An object IS a function
+   function Holiday(destination, duration, cost) {
+     this.destination = destination; //"this" used in same sense as Java
+     this.duration    = duration;
+     this.cost        = cost;
+     this.agent       = tourOperator;     
+   }
+   
+   function makeHoliday(dest, dur, cost) {
+     hol = new Holiday(dest, dur,cost);
+     holList.push(hol); // can't use "push" on older browsers
+   }
+   
+   function outputObject(anObject) {
+     for (f in anObject) {
+       document.write(f + " = " + anObject[f] + "<br />");
+     }
+   }
+   
+   function showHolidays() {
+     for ( var i = 0; i < holList.length; i++){
+       outputObject(holList[i]);
+     }
+   }
+
+   </script>
+   
+   <title>JavaScript Objects</title>
+</head>
+
+
+<body>
+
+<script language="javascript">
+  document.write("<h3>-------------My holidays---------------</h3>");
+  makeHoliday("Beijing", "1 week", "$500");
+  makeHoliday("Yantai", "4 days", "$300");
+  makeHoliday("Qingdao", "3 days", "$380");
+  showHolidays();
+  
+</script>
+
+
+</body>
+</html>

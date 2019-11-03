@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<HTML lang="en">
+    <HEAD>
+    <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+    <meta http-equiv="Content-Language" content="en-us">
+        <script language="javascript">
+        // Investigating a Form
+        // Some ideas here were taken from David Flanagan; "JavaScript. 3rd edition"; 1998; O'Reilly
+        // Another GREAT! Nutshell book.
+        // See Chapter 16 at ftp://ftp.oreilly.com/pub/examples/nutshell/javascript/
+        // I also used Sebesta; "programming the World Wide Web 2nd edition"; 2003; Addison Wesley
+        // and Bates; "Web Programming"; 2002; Wiley.
+        
+        var word1 = "my word"; // a global variable
+        
+        
+        function checkSubmit() 
+        {
+            var valid = true;
+            var q = document.quiz;
+            var qc = q.chat;       
+
+            if (!checkName(q, qc)) {
+                alert("You must input your last name!");
+                return false;
+            }
+
+            if (!checkAge(q, qc)) {
+                alert("Please input a valid age! (integer between 5 and 150)");
+                return false;
+            } 
+
+            if(!checkID(q, qc)) {
+                alert("You must input a valid ID! (contain only numbers, no less than 5 digits)");
+                return false;
+            }
+    
+            for ( var i=0; i<q.holiday.options.length; i++) {
+                if (q.holiday.options[i].selected) {
+                    qc.value += "Selected: " + q.holiday.options[i].value + "\n";
+                }
+            }
+
+            checkText(q, qc);
+            
+            $("#my-quiz").submit();
+        } // checkSubmit
+
+        function checkName(q, qc)
+        {
+            if ( noValue(q.Personal_FirstName.value) ) {
+                qc.value += "What no name? - I shall call you You-Know-Who\n";
+                q.Personal_FirstName.value = "You-Know-Who";
+            }
+            if ( noValue(q.Personal_LastName.value) ) {
+                return false;
+            }
+            return true;
+        }
+
+        function checkAge(q, qc)
+        {
+            var age = q.Personal_Age.value;
+            if (age.search(/\D/) != -1)
+                return false;
+            else if (Number(age) >150 || Number(age) < 5)
+                return false;
+            else return true;
+        }
+
+        function checkID(q, qc)
+        {
+            var id = q.Personal_IDNumber.value;
+            if (id.search(/\D/) != -1)
+                return false;
+            if (id.length < 5)
+                return false;
+            return true;
+        }
+        
+        function noValue(val)  
+        {
+            // javascript uses the regular expressions from perl
+            // Sebesta 4.12.1
+            if (val.search(/\w/) == -1) {
+                return true;
+            } 
+            return false;
+        } //noValue
+        
+        function checkText(q, qc) {
+            //Warn if text boxes are empty (any alphanumeric is OK)
+            //qc.value += "checkText\n"; 
+            for ( var i =0 ; i < q.length; i++) {
+            if (noValue(q.elements[i].value)) {
+                    qc.value += "No value: "+ q.elements[i].name + "\n";
+                }
+            }
+        }// checkText
+    
+        </script>
+    <TITLE>Form 2 Wizard</TITLE>
+    <script type="text/javascript" src="/script/jquery-3.4.1.min.js"></script>
+    </HEAD>
+    <BODY>
+    <H1>Form 2 Wizard</H1>
+    <HR>    
+    <form action="/script/hw5/list_quiz.php" id="my-quiz" method="GET" name="quiz">
+    <OL>
+    <LI><P>Please identify and describe yourself:</P>
+    <TABLE>
+    <TR>
+    <TD ALIGN="right"><EM>First Name</EM></TD>
+    <TD><INPUT TYPE=TEXT NAME="Personal_FirstName" SIZE=25></TD>
+    </TR><TR>
+    <TD ALIGN="right"><EM>Last Name</EM></TD>
+    <TD><INPUT TYPE=TEXT NAME="Personal_LastName" SIZE=25></TD>
+    </TR><TR>
+    <TD ALIGN="right"><EM>Age</EM></TD>
+    <TD><INPUT TYPE=TEXT NAME="Personal_Age" SIZE=3 MAXLENGTH=3></TD>
+    </TR><TR>
+    <TD ALIGN="right"><EM>Sex</EM></TD>
+    <TD><INPUT TYPE=RADIO NAME="Personal_Sex" VALUE="Male" CHECKED>Male 
+    <INPUT TYPE=RADIO NAME="Personal_Sex" VALUE="Female">Female</TD>
+    </TR><TR>
+    <TD ALIGN="right"><EM>ID Number</EM></TD>
+    <TD><INPUT TYPE=TEXT NAME="Personal_IDNumber" SIZE=16 MAXLENGTH=16></TD>
+    <td>(At least 5 digits)</td>
+    </TR>
+    </TABLE>
+    
+    <LI><P>What will you do to kill time:</P>
+    <P><INPUT TYPE=RADIO NAME="watch" VALUE="Dunno" CHECKED> I don't know?!
+    <BR><INPUT TYPE=RADIO NAME="watch" VALUE="Radio"> Radio
+    <BR><INPUT TYPE=RADIO NAME="watch" VALUE="TV"> TV
+    <BR><INPUT TYPE=RADIO NAME="watch" VALUE="Film"> Film
+    <BR><BR>
+    </P>
+    
+    <LI><P>Where do you want to spend a holiday:</P>
+    <P><SELECT NAME="holiday">
+        <OPTION value="Greece" SELECTED>Greece <OPTION value="Italy">Italy 
+        <OPTION value="France">France <OPTION value="Spain">Spain
+    </SELECT>
+    <BR>
+    </P>
+    <LI><P>How would you rate your knowledge of JavaScript?</P>
+    <P>
+        <INPUT TYPE=RADIO NAME="knowledge" VALUE="1" onClick="alert('Time for some SERIOUS learning');">1
+        <INPUT TYPE=RADIO NAME="knowledge" VALUE="2" onClick="alert('I hope you\'re yearning for some learning');">2
+        <INPUT TYPE=RADIO NAME="knowledge" VALUE="3" CHECKED>3
+        <INPUT TYPE=RADIO NAME="knowledge" VALUE="4">4
+        <INPUT TYPE=RADIO NAME="knowledge" VALUE="5">5 
+        <BR></P>
+    </OL>
+    <p />
+    <textarea name="chat" rows=5 cols=40></textarea><p />
+    <INPUT TYPE=button VALUE="Don't press Me" name="push" onClick="alert('HOW RUDE!!!!\nI asked you NOT to press me');">
+    <INPUT TYPE=SUBMIT VALUE="Submit Form" onClick="return checkSubmit();">
+    <INPUT TYPE=RESET VALUE="Reset Form" onClick="return confirm('Are you sure?');">
+    
+    </FORM>
+    
+    <HR>
+        <p style="margin-top: 20px;">
+        <a href="/hw5/hw5.html" style="color:blue; text-decoration:none;">Return</a>
+        </p>
+    </BODY>
+</HTML>
+        
