@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   <script language="javascript">
+   
+   
+   function myAlert() {
+     window.alert("Hello");     
+   }
+   
+   function myAlert2(aString) { 
+     window.alert("Alerting: " + aString);
+     return 34;
+   }
+
+   function new_string(str1, str2) {
+     return str1 + " != " + str2;
+   }
+
+   </script>
+   
+   <title>Using Functions</title>
+</head>
+
+<body>
+
+<script language="javascript">
+  document.write("Mr Pudding says: <b>Hi there</b><br />");
+   myAlert();
+   result = myAlert2("everyone");
+   document.write("The return value was: " + result + "<br>");
+   document.write("The doubled value was: " + (result*2) + "<br>");
+   document.write(new_string("this", "that"));
+</script>
+
+</body>
+</html>
