@@ -1,9 +1,13 @@
 .header {
     text-align: center;
 }
+html {
+    height: 100%;
+}
 body {
     padding-left: 10%;
     padding-right: 10%;
+    height: 100%;
 }
 .web_title {
     font-size: 32px;
