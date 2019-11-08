@@ -27,3 +27,11 @@ a:hover {
 a:active {
     text-decoration: none;
 }
+
+footer {
+    height: 60px;
+    position: absolute;
+    border-top: 1px solid gray;
+    width: 80%;
+    line-height: 40px;
+}
