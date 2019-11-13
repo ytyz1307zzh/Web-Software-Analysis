@@ -1,0 +1,92 @@
+<?xml version = "1.0"?>
+
+<!-- catalog.xs -->
+
+
+
+<xs:schema
+
+    xmlns:xs =  "http://www.w3.org/2001/XMLSchema"
+
+    targetNamespace = "http://162.105.146.123/~y2019g15/apache/homepage/hw7/cookbook"
+
+    xmlns = "http://162.105.146.123/~y2019g15/apache/homepage/hw7/cookbook"
+
+    elementFormDefault = "qualified">
+
+
+
+    <xs:element name = "cookbook">
+
+       <xs:complexType>
+
+          <xs:sequence>
+
+               <xs:element name="recipe" maxOccurs="unbounded">
+
+                   <xs:complexType>
+
+                      <xs:sequence>
+
+                         <xs:element name = "name"
+
+                                            type =  "xs:string"
+
+                                            minOccurs = "1"
+
+                                            maxOccurs = "1"/>
+
+                         <xs:element name = "score"
+
+                                            type =  "xs:string"
+
+                                            minOccurs = "1"
+
+                                            maxOccurs = "1"/>
+
+                         <xs:element name = "ingredient" maxOccurs = "unbounded">
+
+                            <xs:complexType>
+
+                               <xs:sequence>
+
+                                  <xs:element name = "name"
+
+                                            type =  "xs:string"
+
+                                            minOccurs = "1"
+
+                                            maxOccurs = "1"/>
+
+                                  <xs:element name = "amount"
+
+                                            type =  "xs:string"
+
+                                            minOccurs = "1"
+
+                                            maxOccurs = "1"/>
+
+                               </xs:sequence>
+
+                            </xs:complexType>
+
+                         </xs:element>
+
+                        <xs:element name = "cooking" type = "xs:string" maxOccurs = "unbounded"/>
+
+                        <xs:element name = "nutrition" type = "xs:string" maxOccurs = "unbounded"/>
+
+
+                      </xs:sequence>
+
+                   </xs:complexType>
+
+               </xs:element>
+
+          </xs:sequence>
+
+       </xs:complexType>
+
+    </xs:element>
+
+</xs:schema>

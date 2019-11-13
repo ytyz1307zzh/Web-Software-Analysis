@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="recipe.xsl"?>
+<cookbook>
+  <recipe>
+    <name>Fall Salad with Cranberry Vinaigrette</name>
+    <score>4/5</score>
+    <ingredient>
+      <name>Cider Vinegar</name>
+      <amount>1/2 cup</amount>
+    </ingredient>
+    <ingredient>
+      <name>Cranberries</name>
+      <amount>1/4 cup</amount>
+    </ingredient>
+    <ingredient>
+      <name>White Sugar</name>
+      <amount>2 teaspoons</amount>
+    </ingredient>
+    <ingredient>
+      <name>Red Anjou Pears</name>
+      <amount>2</amount>
+    </ingredient>
+    <ingredient>
+      <name>Belgian Endive</name>
+      <amount>2 medium heads</amount>
+    </ingredient>
+    <cooking>In a saucepan, combine vinegar and cranberries. Cook over medium heat until cranberries soften. Remove from heat; add olive oil, sugar, salt and pepper. Place in blender and mix until smooth. Refrigerate until chilled.</cooking>
+    <cooking>Core and julienne one pear, core and dice the other.</cooking>
+    <cooking>In a large bowl, combine the Romaine lettuce, endive, diced pears, walnuts and Gorgonzola. Toss and drizzle with enough dressing to coat.</cooking>
+    <cooking>Divide among salad plates and garnish with julienned pear. Top with any additional walnuts as well.</cooking>
+    <nutrition>214 calories</nutrition>
+    <nutrition>15.1g fat</nutrition>
+    <nutrition>6.2g protein</nutrition>
+    <nutrition>16.2g carbohydrates</nutrition>
+  </recipe>
+
+  <recipe>
+    <name>Grilled Tuscan Rib Steak</name>
+    <score>5/5</score>
+    <ingredient>
+      <name>Dried Thyme</name>
+      <amount>1.5 cup</amount>
+    </ingredient>
+    <ingredient>
+      <name>Cayenne Pepper</name>
+      <amount>1/4 teaspoon</amount>
+    </ingredient>
+    <ingredient>
+      <name>Dried Oregano</name>
+      <amount>1 teaspoon</amount>
+    </ingredient>
+    <ingredient>
+      <name>Boneless Rib Eye Steaks</name>
+      <amount>12 ounce</amount>
+    </ingredient>
+    <ingredient>
+      <name>Smoked Paprika</name>
+      <amount>2 teaspoons</amount>
+    </ingredient>
+    <cooking>Mix the spices together in a small bowl. Rub the steaks lightly with olive oil and sprinkle both sides with the spice rub.</cooking>
+    <cooking>Preheat the grill to medium-high heat. Place the steaks on the grill and cook 5 to 7 minutes per side, depending on how well done you like your steak. </cooking>
+    <cooking>Let the steak rest for at least 15 minutes, then slice across grain into thick slices.</cooking>
+    <nutrition>265 calories</nutrition>
+    <nutrition>19.5g fat</nutrition>
+    <nutrition>19g protein</nutrition>
+    <nutrition>2.8g carbohydrates</nutrition>
+  </recipe>
+
+  <recipe>
+    <name>White Bean Chicken Chili</name>
+    <score>3/5</score>
+    <ingredient>
+      <name>Chopped Onion</name>
+      <amount>1</amount>
+    </ingredient>
+    <ingredient>
+      <name>Cloves Garlic</name>
+      <amount>2</amount>
+    </ingredient>
+    <ingredient>
+      <name>Chicken Broth</name>
+      <amount>14.5 ounce</amount>
+    </ingredient>
+    <ingredient>
+      <name>Tomatillos</name>
+      <amount>18.75 ouce</amount>
+    </ingredient>
+    <ingredient>
+      <name>Diced Tomatoes</name>
+      <amount>16 ounce</amount>
+    </ingredient>
+    <ingredient>
+      <name>Diced Green Chili</name>
+      <amount>7 ounce</amount>
+    </ingredient>
+    <ingredient>
+      <name>Fresh Corn</name>
+      <amount>2 ears</amount>
+    </ingredient>
+    <ingredient>
+      <name>White Beans</name>
+      <amount>15 ounce</amount>
+    </ingredient>
+    <cooking>Heat oil, and cook onion and garlic until soft.</cooking>
+    <cooking>Stir in broth, tomatillos, tomatoes, chilies, and spices. Bring to a boil, then simmer for 10 minutes.</cooking>
+    <cooking>Add corn, chicken, and beans; simmer 5 minutes. Season with salt and pepper to taste.</cooking>
+    <nutrition>220 calories</nutrition>
+    <nutrition>6.1g fat</nutrition>
+    <nutrition>20.1g protein</nutrition>
+    <nutrition>21.2g carbohydrates</nutrition>
+  </recipe>
+</cookbook>
