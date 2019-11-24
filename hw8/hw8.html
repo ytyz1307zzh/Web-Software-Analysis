@@ -19,10 +19,26 @@
         </div> 
         <div id="hw8" style="padding-left: 20px;">
             <p>
-                <b>Q</b>: Re-implement the survey program in Homework 3 in MVC mode.
+                <b>Q1</b>: Re-implement the survey program in Homework 3 in MVC mode.
             </p>
             <p>
-                <b>A</b>: The survey can be found <a href="/hw8/qa.html">here</a>.
+                <b>A1</b>: The survey can be found <a href="/hw8/qa.html">here</a>.<br>
+                My MVC mode is implemented using PHP. Three PHP classes are created, namely 
+                Controller, Model, and View. View includes methods to display information on the webpage.
+                Model includes functions to manipulate the MySQL database, i.e. to insert, list or delete data.
+                Controller, as its name suggests, controls the actions of Model and View while
+                separating front-end webpage and back-end programs.<br>
+                Any other PHP script can basically use the interface provided by Controller to perform
+                its desired behavior. It just need to include the source scripts of these classes and
+                initialize instances of them.
+            </p>
+            <p>
+                <b>Q2</b>: Use Apache as the front-end server, use a reverse proxy to assign web requests to 
+                web applications.
+            </p>
+            <p>
+                <b>A2</b>: Apache reverse proxy is using the port 8515. Original pages are using the port 9015.
+                The reverse proxy is configured by adding modules to original Apache.
             </p>
         </div>
         <footer>
